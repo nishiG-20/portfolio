@@ -28,14 +28,23 @@ function Blog() {
     })();
   }, []);
 
+  const cardStyle = {
+    maxWidth: 320,
+    height: 200,
+    mt: 3,
+    "&:hover": {
+      transform: "scale(1.2)",
+    },
+  };
+
   return (
     <Grid container spacing={2}>
       {earPhnData &&
         earPhnData.map((elem, index) => {
-          let {mainImage,title}=elem
+          let { mainImage, title } = elem;
           return (
             <Grid item xs={4} key={index}>
-              <Card sx={{ maxWidth: 320, height: 200, mt: 3 }}>
+              <Card sx={[cardStyle]}>
                 <CardActionArea>
                   <CardMedia
                     component="img"
@@ -45,11 +54,12 @@ function Blog() {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                     {title}
+                      {title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      
-                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                    ></Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
