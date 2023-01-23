@@ -32,6 +32,7 @@ function ResponsiveAppBar() {
   };
 
   const handleCloseNavMenu = (link="/") => {
+    console.log(link)
     setAnchorElNav(null);
     navigate(link)
   };
@@ -93,7 +94,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page,index) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={()=>handleCloseNavMenu(links[index])}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}

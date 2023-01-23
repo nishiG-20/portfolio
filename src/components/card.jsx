@@ -12,7 +12,7 @@ export default function ActionAreaCard() {
     <Grid container spacing={2}>
       {[1, 2, 3, 4, 5, 6].map((elem,index) => {
         return (
-          <Grid item xs={4}>
+          <Grid item xs={4} key={index}>
             <Card sx={{ maxWidth: 320,height:200, mt: 3 }}>
               <CardActionArea>
                 <CardMedia

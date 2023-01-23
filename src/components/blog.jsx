@@ -32,6 +32,7 @@ function Blog() {
     maxWidth: 320,
     height: 200,
     mt: 3,
+    ml:5,
     "&:hover": {
       transform: "scale(1.2)",
     },
