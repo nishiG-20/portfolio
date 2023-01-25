@@ -7,10 +7,40 @@ import { CardActionArea } from "@mui/material";
 import hdphn from "../images/hdphn.jpg";
 import Grid from "@mui/material/Grid";
 
+
+const headphones = [
+  {
+    name: "Beats Studio3 Wireless",
+    price: "$50",
+    description: "Great Sound Quality",
+  },
+  {
+    name: "Bose QuietComfort 35 II",
+    price: "$75",
+    description: "Comfortable and Durable",
+  },
+  { name: "Sony WH-1000XM4", price: "$100", description: "Noise Cancellation" },
+  {
+    name: "Sennheiser HD 660 S",
+    price: "$150",
+    description: "Wireless and Bluetooth",
+  },
+  {
+    name: "Audio-Technica ATH-M50x",
+    price: "$200",
+    description: "High-Resolution Audio",
+  },
+  {
+    name: "AKG Pro Audio K371",
+    price: "$250",
+    description: "In-Ear Noise Cancellation",
+  }
+];
+
 export default function ActionAreaCard() {
   return (
     <Grid container spacing={2}>
-      {[1, 2, 3, 4, 5, 6].map((elem,index) => {
+      {headphones.map((elem,index) => {
         return (
           <Grid item xs={4} key={index}>
             <Card sx={{ maxWidth: 320,height:200, mt: 3 }}>
@@ -22,8 +52,8 @@ export default function ActionAreaCard() {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Headphone {index+1}
+                  <Typography gutterBottom variant="h6" color="#F44336" component="div">
+                    {elem.name}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     Lizards are a widespread group of squamate reptiles, with
